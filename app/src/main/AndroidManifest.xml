@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stabstudio.discussionapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/discussion_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/discussion_app"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DesignDemo">
+
+        <activity
+            android:name=".UI.GoogleSignInActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".UI.HomeScreenActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.DesignDemo" />
+
+        <activity
+            android:name=".UI.BottomMenuActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_bottom_menu" />
+
+        <activity
+            android:name=".UI.DiscussionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".UI.AddDiscussionActivity"
+            android:screenOrientation="portrait"
+            android:label="Create Discussion"
+            android:theme="@style/Theme.DesignDemoActionBar"/>
+
+        <activity
+            android:name=".UI.PlaceAutocompleteActivity"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

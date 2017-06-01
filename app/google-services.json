@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "802702277368",
+    "firebase_url": "https://discussionapp-d3469.firebaseio.com",
+    "project_id": "discussionapp-d3469",
+    "storage_bucket": "discussionapp-d3469.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802702277368:android:113f5915b0949a18",
+        "android_client_info": {
+          "package_name": "com.stabstudio.discussionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802702277368-95at466phh8c4orph8rrke46lpoh6a1s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stabstudio.discussionapp",
+            "certificate_hash": "996d1b72344e9ce6d3eb3f92d6ec29dbde4767fe"
+          }
+        },
+        {
+          "client_id": "802702277368-lpbri20lij7qmqjb261od0kb1rts5bt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXao_1cbmjpiiSZm1t4Ua7nmtG5fV3ZuE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802702277368-lpbri20lij7qmqjb261od0kb1rts5bt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

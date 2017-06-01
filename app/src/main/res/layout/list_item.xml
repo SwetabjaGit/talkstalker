@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ddd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="?android:selectableItemBackground"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:id="@+id/image_container"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_marginRight="10dp">
+
+                <!--<ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:maxHeight="72dp"
+                    android:maxWidth="72dp"
+                    android:src="@drawable/list_item_image" />-->
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:maxHeight="72dp"
+                    android:maxWidth="72dp"
+                    android:src="@drawable/list_item_image"/>-->
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/dis_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/image_container"
+                android:text="Time to clean the streets"
+                android:textColor="#222"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dis_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dis_subject"
+                android:layout_toRightOf="@id/image_container"
+                android:text="David Franco"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/dis_timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dis_author"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/image_container"
+                android:text="11 minutes ago"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/dis_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/comment_count"
+                android:text="Palo Alto"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/like_count"
+                android:layout_toEndOf="@+id/image_container" />
+
+            <ImageView
+                android:id="@+id/like_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="2dp"
+                app:srcCompat="@drawable/ic_like_icon"
+                android:layout_alignBottom="@+id/image_container"
+                android:layout_toStartOf="@+id/like_count" />
+
+            <TextView
+                android:id="@+id/like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/like_icon"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="2dp"
+                android:layout_toStartOf="@+id/comment_icon"
+                android:gravity="center"
+                android:text="250"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/comment_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="2dp"
+                app:srcCompat="@drawable/ic_mode_comment"
+                android:layout_alignBottom="@+id/like_count"
+                android:layout_toStartOf="@+id/comment_count" />
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="12sp"
+                android:layout_alignTop="@+id/comment_icon"
+                android:layout_alignParentEnd="true" />
+
+            <!--<TextView
+                android:text="Category"
+                android:id="@+id/newsCategory"
+                android:textAllCaps="true"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_gravity="end|right"
+                android:layout_alignBottom="@+id/comment_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/comment_count" />-->
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
