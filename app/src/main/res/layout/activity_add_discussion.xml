@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:background="#eee"
-    >
+    tools:context="com.stabstudio.discussionapp.UI.AddDiscussionActivity">
 
         <TextView
             android:id="@+id/heading"

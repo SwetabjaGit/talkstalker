@@ -9,7 +9,7 @@
     android:background="#eee"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.stabstudio.discussionapp.UI.AddDiscussionActivity">
+    >
 
     <ScrollView
         android:layout_width="match_parent"

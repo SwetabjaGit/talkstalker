@@ -67,7 +67,7 @@ public class AddDiscussionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_discussion_test);
+        setContentView(R.layout.activity_add_discussion);
 
         ButterKnife.bind(this);
 
