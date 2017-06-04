@@ -1,5 +1,7 @@
 package com.stabstudio.discussionapp.UI;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,27 +36,40 @@ import com.stabstudio.discussionapp.R;
 
 import org.joda.time.DateTime;
 
+import java.util.Calendar;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class AddDiscussionActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private DatabaseReference dRef;
     private StorageReference sRef;
 
-    private EditText topic;
-    private EditText content;
-    private ImageView image;
-    private Button publish;
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+
     private ProgressDialog progressDialog;
     private Uri imageFile;
     private String userId;
 
-    private SharedPreferences preferences;
-    private SharedPreferences.Editor editor;
+    @BindView(R.id.dis_topic) EditText topic;
+    @BindView(R.id.dis_content) EditText content;
+    @BindView(R.id.dis_image) ImageView image;
+    //@BindView(R.id.dis_date) TextView dateView;
+    @BindView(R.id.post_discussion) Button publish;
+
+    private int mYear;
+    private int mMonth;
+    private int mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_discussion);
+        setContentView(R.layout.create_discussion_test);
+
+        ButterKnife.bind(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -65,10 +81,6 @@ public class AddDiscussionActivity extends AppCompatActivity {
         preferences = getSharedPreferences("MetaData", Context.MODE_PRIVATE);
         editor = preferences.edit();
 
-        topic = (EditText) findViewById(R.id.dis_topic);
-        content = (EditText) findViewById(R.id.dis_content);
-        image = (ImageView) findViewById(R.id.dis_image);
-        publish = (Button) findViewById(R.id.post_discussion);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Publishing");
         progressDialog.setMessage("Please wait...");
@@ -81,6 +93,13 @@ public class AddDiscussionActivity extends AppCompatActivity {
             }
         });
 
+        /*dateView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDate();
+            }
+        });*/
+
         publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +107,23 @@ public class AddDiscussionActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    private void getDate(){
+        DatePickerDialog.OnDateSetListener mDateSetListener =
+                new DatePickerDialog.OnDateSetListener() {
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        mDay = dayOfMonth;
+                        mMonth = monthOfYear;
+                        mYear = year;
+                        mMonth++;
+                        String dateStr = mMonth + "," + mDay + "," + mYear;
+                        //dateView.setText(dateStr);
+                    }
+                };
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, mDateSetListener, mYear, mMonth, mDay);
+        datePickerDialog.show();
     }
 
     private void publishDiscussion(){
@@ -112,7 +148,6 @@ public class AddDiscussionActivity extends AppCompatActivity {
                                DateTime.now().getYear();
 
             Discussion newDiscussion = new Discussion(disId, placeId, userId, topicStr, imagePath, contentStr, timeStamp, 0, 0);
-
             disRef.child(disId).setValue(newDiscussion);
             placeDisRef.child(placeId).child(disId).setValue(newDiscussion);
 

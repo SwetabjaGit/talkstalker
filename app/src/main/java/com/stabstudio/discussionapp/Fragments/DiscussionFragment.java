@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,6 +31,9 @@ import com.stabstudio.discussionapp.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class DiscussionFragment extends Fragment {
@@ -54,12 +58,16 @@ public class DiscussionFragment extends Fragment {
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
 
+    @BindView(R.id.linlaHeaderProgress) LinearLayout progressLayout;
+
     public static ArrayList<Discussion> discussionList = new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View vi = inflater.inflate(R.layout.fragment_discussion, container, false);
+
+        ButterKnife.bind(this, vi);
 
         preferences = getActivity().getSharedPreferences("MetaData", Context.MODE_PRIVATE);
         editor = preferences.edit();
@@ -68,7 +76,8 @@ public class DiscussionFragment extends Fragment {
         progressDialog.setTitle("Loading Discussions");
         progressDialog.setMessage("Please Wait...");
         progressDialog.setCancelable(false);
-        progressDialog.show();
+        //progressDialog.show();
+        progressLayout.setVisibility(View.VISIBLE);
 
         rv = (RecyclerView) vi.findViewById(R.id.discussion_recycler_view);
         layoutManager = new LinearLayoutManager(rv.getContext());
@@ -115,7 +124,8 @@ public class DiscussionFragment extends Fragment {
                 }
                 adapter = new DiscussionsAdapter(getActivity());
                 rv.setAdapter(adapter);
-                progressDialog.dismiss();
+                //progressDialog.dismiss();
+                progressLayout.setVisibility(View.GONE);
                 refreshLayout.setRefreshing(false);
             }
 

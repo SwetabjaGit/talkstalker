@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eee"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.stabstudio.discussionapp.UI.AddDiscussionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POST A NEW DISCUSSION"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="9dp" />
+
+            <EditText
+                android:id="@+id/dis_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="#fff"
+                android:ems="10"
+                android:textSize="14dp"
+                android:padding="12dp"
+                android:inputType="textPersonName"
+                android:layout_marginTop="17dp"
+                android:layout_below="@+id/heading"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/heading" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/dis_topic"
+                android:layout_alignStart="@+id/dis_topic"
+                android:id="@+id/view2" />
+
+            <EditText
+                android:id="@+id/dis_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textSize="14dp"
+                android:padding="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/view2"
+                android:layout_alignStart="@+id/view2"
+                android:layout_above="@+id/view" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_alignStart="@+id/dis_topic"
+                android:id="@+id/view"
+                android:layout_above="@+id/dis_image" />
+
+            <ImageView
+                android:id="@+id/dis_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="#fff"
+                android:src="@drawable/add_photo_back"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="64dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/view" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.8dp"
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view3"
+                android:layout_toEndOf="@+id/dis_image"
+                android:layout_alignBottom="@+id/dis_image"
+                android:layout_alignStart="@+id/dis_image" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topic"
+                android:layout_marginEnd="9dp"
+                android:layout_alignBaseline="@+id/dis_topic"
+                android:layout_alignBottom="@+id/dis_topic"
+                android:layout_toStartOf="@+id/dis_topic" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content"
+                android:layout_alignBaseline="@+id/dis_content"
+                android:layout_alignBottom="@+id/dis_content"
+                android:layout_alignEnd="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo"
+                android:layout_marginBottom="66dp"
+                android:layout_above="@+id/view3"
+                android:layout_alignEnd="@+id/textView2" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/post_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="CREATE"
+        android:textColor="#fff"
+        android:background="@drawable/post_button_back" />
+
+</LinearLayout>
