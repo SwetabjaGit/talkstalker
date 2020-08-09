@@ -13,7 +13,7 @@ TalkStalker is an Android App for Group Discussion build using Android Studio & 
 
 ## Apk File
 
-Download the APK from [here](https://drive.google.com/file/d/0BwcoMJ0DNQ-ReGRTRDFkbWp5bkk/view?usp=sharing)
+Download the APK from [here](https://drive.google.com/file/d/0BwcoMJ0DNQ-ReGRTRDFkbWp5bkk/view?usp=sharing).
 
 ## Screenshots
 
