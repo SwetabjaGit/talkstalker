@@ -1,6 +1,6 @@
 # Talk Stalker
 
-TalkStalker is an Android App for Group Discussion.
+TalkStalker is an Android App for Group Discussion build using Android Studio & Firebase.
 
 ## Features
 
@@ -13,4 +13,4 @@ TalkStalker is an Android App for Group Discussion.
 
 ## Screenshots
 
-![S1](https://i.imgur.com/AH8lwRX.jpg) ![S2](https://i.imgur.com/QgpnN1f.jpg) ![S3](https://i.imgur.com/SL5tK5v.jpg)
+![TalkStalker](https://i.imgur.com/ngNTPoc.jpg)
