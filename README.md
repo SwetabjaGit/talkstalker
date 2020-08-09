@@ -13,6 +13,4 @@ TalkStalker is an Android App for Group Discussion.
 
 ## Screenshots
 
-![S1](https://i.imgur.com/AH8lwRX.jpg)
-![S2](https://i.imgur.com/QgpnN1f.jpg)
-![S3](https://i.imgur.com/QgpnN1f.jpg)
+![S1](https://i.imgur.com/AH8lwRX.jpg) ![S2](https://i.imgur.com/QgpnN1f.jpg) ![S3](https://i.imgur.com/SL5tK5v.jpg)
