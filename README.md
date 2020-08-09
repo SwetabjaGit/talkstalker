@@ -6,7 +6,7 @@ TalkStalker is an Android App for Group Discussion built using Android Studio & 
 
 1. Register/Login.
 2. Select Region/Location.
-3. Post Discussions based on a location, with text & media data.
+3. Post Discussions based on a region, with text & media data.
 4. Like, Comment on posts.
 5. Change Profile Image, Name, Email, Phone.
 6. Other users get Notification on liking/commenting.
